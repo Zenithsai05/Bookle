@@ -1,0 +1,730 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333333; /* Updated: Charcoal gray for primary font color */
+    background-color: #F8FAFC; /* Updated: Soft white background */
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    color: #1C2526; /* Updated: Deep navy for headings */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section {
+    padding: 64px 0;
+    opacity: 0; /* For fade-in animation */
+}
+
+/* Loading Animation */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #1C2526; /* Updated: Navy for loading text */
+    transition: opacity 0.5s ease;
+    z-index: 9999;
+}
+
+/* Header */
+.header {
+    background: #FFFFFF;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #00ADB5; /* Updated: Vivid teal for logo */
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav ul li {
+    margin-left: 32px;
+}
+
+.nav ul li a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333333; /* Updated: Charcoal gray for nav links */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav ul li a:hover,
+.nav ul li a.active {
+    color: #FF6F61; /* Updated: Coral for hover/active */
+    transform: translateY(-1px);
+}
+
+.header-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 0.9rem;
+    color: #5C6B73; /* Updated: Slate gray for header info */
+}
+
+.header-info i {
+    margin-right: 8px;
+    color: #00ADB5; /* Updated: Teal for icons */
+}
+
+.chat-icon {
+    font-size: 1.2rem;
+    color: #333333; /* Updated: Charcoal gray for chat icon */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.chat-icon:hover {
+    color: #FF6F61; /* Updated: Coral for hover */
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #00ADB5 0%, #1C2526 100%); /* Updated: Teal-to-navy gradient */
+    color: #FFFFFF;
+    padding: 48px 0;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+}
+
+.hero-quote {
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 16px;
+    border-left: 4px solid #FF6F61; /* Updated: Coral for quote border */
+    padding-left: 16px;
+    color: #E5E7EB;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    color: #E5E7EB;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 32px;
+    background: #00ADB5; /* Updated: Teal for buttons */
+    color: #FFFFFF;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #FF6F61; /* Updated: Coral for hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: 550px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.02);
+}
+
+/* Top Categories */
+.top-categories h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.category-card {
+    background: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.category-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.category-card h3 {
+    padding: 16px;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #333333; /* Updated: Charcoal gray for category titles */
+}
+
+/* Best Sellers */
+.best-sellers {
+    background: #FFFFFF;
+}
+
+.best-sellers h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 24px;
+}
+
+.best-sellers .cta-button {
+    display: block;
+    text-align: center;
+    margin: 0 auto 40px;
+    width: fit-content;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.book-card {
+    background: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.book-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.badge.hot {
+    background: #FF6F61; /* Updated: Coral for hot badge */
+}
+
+.badge.discount {
+    background: #00ADB5; /* Updated: Teal for discount badge */
+}
+
+.badge.new {
+    background: #1C2526; /* Updated: Navy for new badge */
+}
+
+.book-card h3 {
+    padding: 16px;
+    System: 16px 0;
+    font-size: 1.2rem;
+    color: #333333; /* Updated: Charcoal gray for book titles */
+}
+
+.book-card p {
+    padding: 0 16px;
+    color: #FF6F61; /* Updated: Coral for prices */
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.rating {
+    padding: 8px 16px;
+    color: #00ADB5; /* Updated: Teal for ratings */
+    font-size: 0.95rem;
+}
+
+.action-button {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: #00ADB5; /* Updated: Teal for action buttons */
+    color: #FFFFFF;
+    margin: 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.action-button:hover {
+    background: #FF6F61; /* Updated: Coral for hover */
+    transform: translateY(-2px);
+}
+
+/* Find Next Book */
+.find-next {
+    background: linear-gradient(135deg, #00ADB5 0%, #1C2526 100%); /* Updated: Teal-to-navy gradient */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 48px 0;
+}
+
+.find-next h2 {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+}
+
+.find-next p {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    color: #E5E7EB;
+}
+
+.find-next .cta-button {
+    background: #00ADB5; /* Updated: Teal for button */
+    color: #FFFFFF;
+}
+
+.find-next .cta-button:hover {
+    background: #FF6F61; /* Updated: Coral for hover */
+}
+
+/* Testimonials */
+.testimonials h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.testimonial-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.testimonial-card {
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: #5C6B73; /* Updated: Slate gray for testimonial text */
+}
+
+.testimonial-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    border: 2px solid #00ADB5; /* Updated: Teal for image border */
+}
+
+.testimonial-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    color: #333333; /* Updated: Charcoal gray for names */
+}
+
+.testimonial-card small {
+    color: #5C6B73; /* Updated: Slate gray for subtitles */
+    font-size: 0.9rem;
+}
+
+/* Featured Authors */
+.featured-authors {
+    background: #F8FAFC; /* Updated: Soft white background */
+}
+
+.featured-authors h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.author-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.author-card {
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.author-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.author-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    border: 2px solid #00ADB5; /* Updated: Teal for image border */
+}
+
+.author-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #333333; /* Updated: Charcoal gray for author names */
+}
+
+.author-card p {
+    color: #5C6B73; /* Updated: Slate gray for book count */
+    font-size: 0.95rem;
+}
+
+/* Latest News */
+.latest-news h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.news-card {
+    background: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.news-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.news-card h3 {
+    padding: 16px;
+    font-size: 1.2rem;
+    color: #333333; /* Updated: Charcoal gray for news titles */
+}
+
+.news-card p {
+    padding: 0 16px;
+    color: #5C6B73; /* Updated: Slate gray for news(details */
+}
+
+.read-more {
+    display: block;
+    padding: 16px;
+    color: #00ADB5; /* Updated: Teal for read more links */
+    font-weight: 500;
+    text-align: center;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #FF6F61; /* Updated: Coral for hover */
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #1C2526 0%, #00ADB5 100%); /* Updated: Navy-to-teal gradient */
+    color: #E5E7EB;
+    padding: 64px 0 24px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.footer-column h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.footer-about p {
+    margin-bottom: 20px;
+    color: #E5E7EB;
+    font-size: 0.95rem;
+}
+
+.footer-contact p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: #E5E7EB;
+    font-size: 0.9rem;
+}
+
+.footer-contact i {
+    color: #00ADB5; /* Updated: Teal for icons */
+}
+
+.footer-links ul,
+.footer-support ul {
+    list-style: none;
+}
+
+.footer-links ul li,
+.footer-support ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links a,
+.footer-support a {
+    color: #E5E7EB;
+    font-size: 0.9rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-support a:hover {
+    color: #FF6F61; /* Updated: Coral for hover */
+    transform: translateX(4px);
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.newsletter-form input {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.subscribe-btn {
+    padding: 12px 24px;
+    background: #00ADB5; /* Updated: Teal for subscribe button */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.subscribe-btn:hover {
+    background: #FF6F61; /* Updated: Coral for hover */
+    transform: translateY(-2px);
+}
+
+.social-icons {
+    display: flex;
+    gap: 16px;
+}
+
+.social-icons a {
+    color: #E5E7EB;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: #FF6F61; /* Updated: Coral for hover */
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    grid-column: span 4;
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #5C6B73; /* Updated: Slate gray for border */
+}
+
+.payment-icons img {
+    width: 40px;
+    margin: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        text-align: center;
+    }
+
+    .category-grid,
+    .product-grid,
+    .author-grid,
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonial-grid {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 12px;
+        margin: 16px 0;
+    }
+
+    .header-info {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-quote {
+        font-size: 1.2rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-grid,
+    .product-grid,
+    .author-grid,
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-quote {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
